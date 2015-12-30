@@ -1,5 +1,4 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404
 
 from .models import Event
 
@@ -14,4 +13,5 @@ def index(request):
 
 
 def detail(request, event_id):
-    return HttpResponse("You're looking at event %s." % event_id)
+    event = get_object_or_404(Event, pk=event_id)
+    return render(request, 'events/detail.html', {'event': event})

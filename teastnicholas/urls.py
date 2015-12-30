@@ -17,7 +17,10 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from material.frontend import urls as frontend_urls
+
 urlpatterns = [
     url(r'^events/', include('events.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'', include(frontend_urls)),
 ]

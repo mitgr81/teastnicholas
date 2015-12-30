@@ -1,11 +1,10 @@
 {% include 'material/includes/material_css.html' %}
 {% include 'material/includes/material_js.html' %}
-{% load material_form %}
 
 {% if upcoming_event_list %}
     <ul>
     {% for event in upcoming_event_list %}
-        <li><a href="/events/{{ event.id }}/">{{ event.title }}</a></li>
+        <li><a href="{% url 'events:detail' event.id %}">{{ event.title }}</a> - {{ event.start_date }}</li>
     {% endfor %}
     </ul>
 {% else %}
