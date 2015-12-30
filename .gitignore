@@ -1,0 +1,62 @@
+*.py[cod]
+*.log
+*.rdb
+*.dbm
+*.dbm.*
+*__pycache__*
+
+# Configish stuff
+*/wb_core/etc/*.*[^.in]
+*/wb_core/static/user/*
+*wb_core/wb_core/static/derivatives/*
+.boompid-*
+thumbor.conf
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+
+#Transitional Documentation Stuff
+lumps
+docs/_build
+
+# SQLite DB's
+celery.sqlite
+db.sqlite3
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+covers/.coverage.*
+.coverage
+.tox
+nosetests.xml
+
+# Translations
+*.mo
+
+#BDD Stuff
+ghostdriver.log
+
+#Mac Stuff
+.DS_Store
+
+#Miscellany
+.ipynb_checkpoints
+tests/focus/*
+profile_dumps/*
