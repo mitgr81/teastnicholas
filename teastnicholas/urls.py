@@ -16,11 +16,11 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-
-from material.frontend import urls as frontend_urls
+from .views import HomePageView
 
 urlpatterns = [
     url(r'^events/', include('events.urls')),
     url(r'^admin/', admin.site.urls),
-    url(r'', include(frontend_urls)),
+    url(r'^$', HomePageView.as_view(), name='home'),
+
 ]
